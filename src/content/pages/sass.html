@@ -3,7 +3,7 @@ title: "The SASS Branch"
 description: "The SASS branch of the advanced starter kit. Provides a SASS processor to provide extra tools and functionality when writing your CSS."
 permalink: 'sass/'
 eleventyNavigation:
-    key: 'SASS'
+    key: 'Обучение'
     order: '200'
 ---
 
@@ -11,6 +11,31 @@ eleventyNavigation:
 
 {% block head %}
     <link rel="stylesheet" href="/assets/css/sass.css">
+
+
+    <script defer>
+        document.addEventListener('DOMContentLoaded', () => {
+            const faqItems = Array.from(document.querySelectorAll('.cs-faq-item'));
+                for (const item of faqItems) {
+                    const onClick = () => {
+                    item.classList.toggle('active')
+                }
+                item.addEventListener('click', onClick)
+                }
+            });     
+            
+            const toggle = document.querySelector("#pricing-603 .cs-toggle");
+            const cardGroup = Array.from(document.querySelectorAll('.cs-card-group'));
+
+            if (toggle && cardGroup.length) {
+                toggle.addEventListener('click', (e) => { 
+                    for (const item of cardGroup) {
+                        item.classList.toggle("active");
+                    }
+                    toggle.classList.toggle("active");
+                });
+            }
+    </script>
 {% endblock %}
 
 {% block body %}
@@ -20,10 +45,10 @@ eleventyNavigation:
 
     <div id="banner-1402">
         <div class="cs-container">
-            <span class="cs-int-title">SASS Branch</span>
+            <span class="cs-int-title">Обучние Таро</span>
             <div class="cs-breadcrumbs">
-                <a href="" class="cs-link">Main</a>
-                <a href="" class="cs-link cs-active">SASS</a>
+                <a href="" class="cs-link">Главная</a>
+                <a href="" class="cs-link cs-active">Обучение</a>
             </div>
         </div>
         <!--Background Image-->
@@ -37,47 +62,463 @@ eleventyNavigation:
     </div>
 
     <!-- ============================================ -->
-    <!--                 Content Page                 -->
+    <!--                Side By Side                  -->
     <!-- ============================================ -->
 
-    <section id="content-page-1402">
+    <section id="sbs-1470">
         <div class="cs-container">
             <div class="cs-image-group">
-                <div class="cs-flex">
-                    <picture class="cs-background">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/on-computer2.jpg">
-                        <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/on-computer2.jpg">
-                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/on-computer2.jpg" alt="people" width="542" height="728">
-                    </picture>
-                    <div class="cs-box">
-                        <img class="cs-box-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/adv-kit-easy.svg" alt="people" width="60" height="60">
-                        <span class="cs-desc">
-                            Minimal setup required!
-                        </span>
-                    </div>
-                </div>
+                <!--Top left image-->
+                <picture class="cs-picture cs-picture1">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/kid1.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/kid1.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/kid1.jpg" alt="kid" width="413" height="388">
+                </picture>
+                <!--Middle image-->
+                <picture class="cs-picture cs-picture2">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/kid2.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/kid2.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/kid2.jpg" alt="kid" width="290" height="290">
+                </picture>
+                <!--Bottom right image-->
+                <picture class="cs-picture cs-picture3">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/kid3.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/kid3.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/kid3.jpg" alt="kid" width="382" height="349">
+                </picture>
+                <!--Green Seed-->
+                <img class="cs-floater1" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-seeds-rotated.svg" alt="graphic" width="163" height="121" aria-hidden="true">
+                <!--Red Seeds-->
+                <img class="cs-floater2" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/red-seeds.svg" alt="graphic" width="81" height="73" aria-hidden="true">
             </div>
             <div class="cs-content">
-                <h1 class="cs-title">SASS - Syntactically Awesome Style Sheets</h1>
-                <p>This branch adds the SASS preprocessor to the kit, allowing you to make use of .scss files to reduce the amount of style code written and add additional functionality upon the base CSS language.</p>
-                <p>All that we've done here is add the preprocessor to the kit, and set up the package.json npm scripts to run & watch when in development mode, and run once when in build mode. Aside from this page, there are no other added styles that come with this branch. Each branch comes with its own SASS styles in ./starter-styles. There are also no CS-TODO's to do with this one either. It just works!</p>
-                <p>As such, minimal action is needed with this one. The few steps needed (CS-TODO) are outlined below:</p>
-                <h2>If you would like to start from scratch, and not use the prebuilt pages with the kit</h2>
-                <ol>
-                    <li>Delete the ./starter-styles directory</li>
-                    <li>Clear all files in src/content, src/assets and _includes/components</li>
-                    <li>Begin</li>
-                </ol>
-                <h2>If you would like to build upon the prebuilt pages in the kit:</h2>
-                <ol>
-                    <li>Move the ./starter-styles/sass files into src/assets/sass</li>
-                    <li>Delete the ./starter-styles folder (now only containing LESS files)</li>
-                    <li>Begin</li>
-                </ol>
+                <span class="cs-topper">About Stitch Day Care</span>
+                <h2 class="cs-title">Welcome To Stitch Daycare & Preschool</h2>
+                <p class="cs-text">
+                    Stitch day care is a place where you can keep your baby with peace in your mind when you are working in your office for the better future of your child. We promise to take care of your child’s social, emotional, intellectual and physical needs with sensitive care and we also ensure you their security with our life.
+                </p>
+                <ul class="cs-ul">
+                    <li class="cs-li">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg" alt="checkmark" width="24" height="24">
+                        Our job is to make your life easier.
+                    </li>
+                    <li class="cs-li">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg" alt="checkmark" width="24" height="24">
+                        Experience childcare as it should be.
+                    </li>
+                    <li class="cs-li">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg" alt="checkmark" width="24" height="24">
+                        We are childcare professionals.
+                    </li>
+                    <li class="cs-li">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg" alt="checkmark" width="24" height="24">
+                        Digital Clean Checklist Prepared New Year
+                    </li>
+                    <li class="cs-li">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg" alt="checkmark" width="24" height="24">
+                        Babysitting with immense love and care.
+                    </li>
+                </ul>
+                <div class="button-box">
+                    <a class="cs-link" href="tel:555-555-0234">
+                        <picture class="cs-img-wrapper">
+                            <img class="cs-img" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/profile1.jpg" alt="profile" width="52" height="52">
+                        </picture>
+                        <div class="cs-info">
+                            <span class="cs-header">Jenny Wilson</span>
+                            <span class="cs-job">Owner</span>
+                        </div>
+                    </a>
+                    <a class="cs-link" href="tel:219-924-5555">
+                        <picture class="cs-wrapper">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-phone.svg" alt="icon" width="24" height="24">
+                        </picture>
+                        <div class="cs-info">
+                            <span class="cs-phone">(219) 924-5555</span>
+                            <span class="cs-link-content">Call to questions</span>
+                        </div>
+                    </a>
+                </div>
+                <a href="" class="cs-button-solid">Learn More</a>
             </div>
         </div>
     </section>
+
+
+    <!-- ============================================ -->
+    <!--                  Services                    -->
+    <!-- ============================================ -->
+
+    <section id="services-296">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">Our Services</span>
+                <h2 class="cs-title">We Are Committed To Delivering Top Quality Legal Services</h2>
+                <p class="cs-text">
+                    At Stitch Law, let us help you solve problems so that you can focus on your mission. We support businesses through periods of expansion, succession.
+                </p>
+            </div>
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <a class="cs-link" href="">
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fcase.svg" alt="icon" width="" height="" loading="lazy" decoding="async" aria-hidden="true">
+                        <h3 class="cs-h3">99% winning guarantee</h3>
+                        <p class="cs-item-text">
+                            Full range of shipping disputes such as charter party disputes, demurrage claims, purchase agreements, trade finance, carriage and claims.
+                        </p>
+                    </a>
+                    <picture class="cs-image"  aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg">
+                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg">
+                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg" alt="library" width="413" height="266">
+                    </picture>
+                </li>
+                <li class="cs-item">
+                    <a href="" class="cs-link">
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fcase.svg" alt="icon" width="" height="" loading="lazy" decoding="async" aria-hidden="true">
+                        <h3 class="cs-h3">Secure management</h3>
+                        <p class="cs-item-text">
+                            Full range of shipping disputes such as charter party disputes, demurrage claims, purchase agreements, trade finance, carriage and claims.
+                        </p>
+                    </a>
+                    <picture class="cs-image"  aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg">
+                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg">
+                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg" alt="library" width="413" height="266">
+                    </picture>
+                </li>
+                <li class="cs-item">
+                    <a href="" class="cs-link">
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fcase.svg" alt="icon" width="" height="" loading="lazy" decoding="async" aria-hidden="true">
+                        <h3 class="cs-h3">Full time support</h3>
+                        <p class="cs-item-text">
+                            Full range of shipping disputes such as charter party disputes, demurrage claims, purchase agreements, trade finance, carriage and claims.
+                        </p>
+                    </a>
+                    <picture class="cs-image"  aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg">
+                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg">
+                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg" alt="library" width="413" height="266">
+                    </picture>
+                </li>
+                <li class="cs-item">
+                    <a class="cs-link" href="">
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fcase.svg" alt="icon" width="" height="" loading="lazy" decoding="async" aria-hidden="true">
+                        <h3 class="cs-h3">Family Law</h3>
+                        <p class="cs-item-text">
+                            We’ve helped thousands of organizations transform to become relevant of helped thousands.
+                        </p>
+                    </a>
+                    <picture class="cs-image">
+                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg">
+                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg">
+                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg" alt="library" width="413" height="266" aria-hidden="true">
+                    </picture>
+                </li>
+            </ul>
+        </div>
+    </section>
+                                    
+    <!-- ============================================ -->
+    <!--                     FAQ                      -->
+    <!-- ============================================ -->
+
+    <section id="faq-350">
+    <div class="cs-container">
+        <div class="cs-left">
+            <!--Big Image-->
+            <picture class="cs-picture cs-picture1" aria-hidden="true">
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaner3-m.jpg">
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaner3.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaner3.jpg" alt="cleaning supplies" width="672" height="672">
+            </picture>
+            <!--Medium Image-->
+            <picture class="cs-picture cs-picture2" aria-hidden="true">
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaning2-m.jpg">
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaning2.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaning2.jpg" alt="cleaning supplies" width="300" height="300">
+            </picture>
+            <!--Small Image-->
+            <picture class="cs-picture cs-picture3" aria-hidden="true">
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaning1-m.jpg">
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaning1.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaning1.jpg" alt="cleaner" width="200" height="200">
+            </picture>
+        </div>
+        <div class="cs-content">
+            <span class="cs-topper">Asked questions</span>
+            <h2 class="cs-title">Frequently Asked Questions</h2>
+            <ul class="cs-faq-group">
+                <!-- Active class added as default -->
+                <li class="cs-faq-item active">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            How much are house cleaning services?
+                        </span>
+                    </button>
+                    <p class="cs-item-p">
+                        Some cleaning plans require a minimum commitment term. Cancelling your plan before the minimum term is complete will result in a $99 fee. If you want to learn more information about how to cancel, please inbox us.
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            What is your plan cancellation policy?
+                        </span>
+                    </button>
+                    <p class="cs-item-p">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            How long should a house cleaning take?
+                        </span>
+                    </button>
+                    <p class="cs-item-p">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            How much are house cleaning services?
+                        </span>
+                    </button>
+                    <p class="cs-item-p">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            Can cleanings be scheduled?
+                        </span>
+                    </button>
+                    <p class="cs-item-p">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </section>
+
+
+    <!-- ============================================ -->
+    <!--                   Pricing                    -->
+    <!-- ============================================ -->
+
+    <section id="pricing-603">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">Pricing</span>
+                <h2 class="cs-title">House Painting Service Packages</h2>
+                <p class="cs-text">
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
+                </p>
+                <div class="cs-toggle-group">
+                    <span id="cs-option1-603" class="cs-plan">Option 1</span>
+                    <div class="cs-toggle" aria-label="click to switch plans pricing">
+                        <span aria-hidden="true" class="cs-toggle-switch"></span>
+                    </div>
+                    <span id="cs-option2-603" class="cs-plan">Option 2</span>
+                </div>
+            </div>
+            <ul class="cs-card-group cs-option1">
+                <li class="cs-item">
+                    <div class="cs-price-box">
+                        <span class="cs-package">Starter</span>
+                        <span class="cs-price">$200</span>
+                        <span class="cs-desc">Free Sign Up</span>
+                    </div>
+                    <p class="cs-item-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                    </p>
+                    <span class="cs-included">Whats Included?</span>
+                    <ul class="cs-ul">
+                        <li class="cs-li">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Pricing/red-check.svg" alt="checkmark" width="15" height="15">
+                            Lorem ipsum dolor sit amet!
+                        </li>
+                        <li class="cs-li">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Pricing/red-check.svg" alt="checkmark" width="15" height="15">
+                            Lorem ipsum dolor sit amet!
+                        </li>
+                        <li class="cs-li">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Pricing/red-check.svg" alt="checkmark" width="15" height="15">
+                            Lorem ipsum dolor sit amet!
+                        </li>
+                    </ul>
+                    <a href="" class="cs-button-solid cs-price-button">Get Started</a>
+                </li>
+                <li class="cs-item">
+                    <div class="cs-price-box">
+                        <span class="cs-package">Starter</span>
+                        <span class="cs-price">$200</span>
+                        <span class="cs-desc">Free Sign Up</span>
+                    </div>
+                    <p class="cs-item-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                    </p>
+                    <span class="cs-included">Whats Included?</span>
+                    <ul class="cs-ul">
+                        <li class="cs-li">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Pricing/red-check.svg" alt="checkmark" width="15" height="15">
+                            Lorem ipsum dolor sit amet!
+                        </li>
+                        <li class="cs-li">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Pricing/red-check.svg" alt="checkmark" width="15" height="15">
+                            Lorem ipsum dolor sit amet!
+                        </li>
+                        <li class="cs-li">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Pricing/red-check.svg" alt="checkmark" width="15" height="15">
+                            Lorem ipsum dolor sit amet!
+                        </li>
+                    </ul>
+                    <a href="" class="cs-button-solid cs-price-button">Get Started</a>
+                </li>
+                <li class="cs-item">
+                    <div class="cs-price-box">
+                        <span class="cs-package">Starter</span>
+                        <span class="cs-price">$200</span>
+                        <span class="cs-desc">Free Sign Up</span>
+                    </div>
+                    <p class="cs-item-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                    </p>
+                    <span class="cs-included">Whats Included?</span>
+                    <ul class="cs-ul">
+                        <li class="cs-li">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Pricing/red-check.svg" alt="checkmark" width="15" height="15">
+                            Lorem ipsum dolor sit amet!
+                        </li>
+                        <li class="cs-li">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Pricing/red-check.svg" alt="checkmark" width="15" height="15">
+                            Lorem ipsum dolor sit amet!
+                        </li>
+                        <li class="cs-li">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Pricing/red-check.svg" alt="checkmark" width="15" height="15">
+                            Lorem ipsum dolor sit amet!
+                        </li>
+                    </ul>
+                    <a href="" class="cs-button-solid cs-price-button">Get Started</a>
+                </li>
+            </ul>
+            <ul class="cs-card-group cs-option2">
+                <li class="cs-item">
+                    <div class="cs-price-box">
+                        <span class="cs-package">Starter</span>
+                        <span class="cs-price">$100</span>
+                        <span class="cs-desc">Free Sign Up</span>
+                    </div>
+                    <p class="cs-item-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                    </p>
+                    <span class="cs-included">Whats Included?</span>
+                    <ul class="cs-ul">
+                        <li class="cs-li">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Pricing/red-check.svg" alt="checkmark" width="15" height="15">
+                            Lorem ipsum dolor sit amet!
+                        </li>
+                        <li class="cs-li">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Pricing/red-check.svg" alt="checkmark" width="15" height="15">
+                            Lorem ipsum dolor sit amet!
+                        </li>
+                        <li class="cs-li">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Pricing/red-check.svg" alt="checkmark" width="15" height="15">
+                            Lorem ipsum dolor sit amet!
+                        </li>
+                    </ul>
+                    <a href="" class="cs-button-solid cs-price-button">Get Started</a>
+                </li>
+                <li class="cs-item">
+                    <div class="cs-price-box">
+                        <span class="cs-package">Starter</span>
+                        <span class="cs-price">$100</span>
+                        <span class="cs-desc">Free Sign Up</span>
+                    </div>
+                    <p class="cs-item-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                    </p>
+                    <span class="cs-included">Whats Included?</span>
+                    <ul class="cs-ul">
+                        <li class="cs-li">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Pricing/red-check.svg" alt="checkmark" width="15" height="15">
+                            Lorem ipsum dolor sit amet!
+                        </li>
+                        <li class="cs-li">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Pricing/red-check.svg" alt="checkmark" width="15" height="15">
+                            Lorem ipsum dolor sit amet!
+                        </li>
+                        <li class="cs-li">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Pricing/red-check.svg" alt="checkmark" width="15" height="15">
+                            Lorem ipsum dolor sit amet!
+                        </li>
+                    </ul>
+                    <a href="" class="cs-button-solid cs-price-button">Get Started</a>
+                </li>
+                <li class="cs-item">
+                    <div class="cs-price-box">
+                        <span class="cs-package">Starter</span>
+                        <span class="cs-price">$100</span>
+                        <span class="cs-desc">Free Sign Up</span>
+                    </div>
+                    <p class="cs-item-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                    </p>
+                    <span class="cs-included">Whats Included?</span>
+                    <ul class="cs-ul">
+                        <li class="cs-li">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Pricing/red-check.svg" alt="checkmark" width="15" height="15">
+                            Lorem ipsum dolor sit amet!
+                        </li>
+                        <li class="cs-li">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Pricing/red-check.svg" alt="checkmark" width="15" height="15">
+                            Lorem ipsum dolor sit amet!
+                        </li>
+                        <li class="cs-li">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Pricing/red-check.svg" alt="checkmark" width="15" height="15">
+                            Lorem ipsum dolor sit amet!
+                        </li>
+                    </ul>
+                    <a href="" class="cs-button-solid cs-price-button">Get Started</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+                
+
+
+    <!-- ============================================ -->
+    <!--                     CTA                      -->
+    <!-- ============================================ -->
+
+    <section id="cta-51">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">Contact Us</span>
+                <h2 class="cs-title">Get It Done With Us Today</h2>
+                <p class="cs-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis at sit pellentesque molestie.  Diam, adipiscing ultrices eu turpis gravida.
+                </p>
+                <a href="" class="cs-button-solid">Gret A Free Quote</a>
+            </div>
+        </div>
+        <!-- Background Image-->
+        <picture class="cs-picture">
+            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/CTA/cabinets-m.jpg">
+            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/CTA/cabinets.jpg">
+            <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/CTA/cabinets.jpg" alt="cabinets" width="1920" height="1280" aria-hidden="true">
+        </picture>
+    </section>
+                                                                
 
 {% endblock %}

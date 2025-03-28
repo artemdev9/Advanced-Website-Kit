@@ -3,9 +3,8 @@ title: "CMS Blog"
 description: "The classic CodeStitch blog, controlled by Decap CMS. Lists all blog posts and provides an option to 'feature' posts to a sidebar"
 permalink: 'blog/'
 eleventyNavigation:
-    key: 'Blog'
+    key: 'Блог'
     order: '100'
-    parent: 'CMS'
 ---
 {% extends "layouts/base.html" %}
 
@@ -18,14 +17,24 @@ eleventyNavigation:
     <!--                    Landing                   -->
     <!-- ============================================ -->
 
-    <section id="int-hero">
-        <h1 id="home-h">Blog</h1>
-        <picture>
-            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/CTA/meeting.jpg">
-            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/CTA/meeting.jpg">
-            <img aria-hidden="true" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/CTA/meeting.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
+
+    <div id="banner-1402">
+        <div class="cs-container">
+            <span class="cs-int-title">Таро Бло</span>
+            <div class="cs-breadcrumbs">
+                <a href="" class="cs-link">Главная</a>
+                <a href="" class="cs-link cs-active">Блог</a>
+            </div>
+        </div>
+        <!--Background Image-->
+        <picture class="cs-background">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people-laughing.jpg">
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people-laughing.jpg">
+            <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people-laughing.jpg" alt="people laughing" width="1280" height="568" aria-hidden="true">
         </picture>
-    </section>
+    </div>
 
     <!-- ============================================ -->
     <!--              Main Blog Content               -->
