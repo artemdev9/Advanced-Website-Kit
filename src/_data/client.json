@@ -1,21 +1,22 @@
 {
-    "name": "Code Stitch Web Designs",
-    "email": "help@codestitch.app",
-    "phoneForTel": "555-123-4567",
-    "phoneFormatted": "(555) 123-4567",
+    "name": "Анна — Таролог с 9-летним опытом",
+    "phoneForTel": "",
+    "phoneFormatted": "",
     "address": {
-        "lineOne": "First Address Line",
-        "lineTwo": "Second Address Line",
-        "city": "Denver",
-        "state": "CO",
-        "zip": "80206",
-        "mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
+      "lineOne": "",
+      "lineTwo": "",
+      "city": "",
+      "state": "",
+      "zip": "",
+      "mapLink": ""
     },
     "social": {
-        "facebook": "https://www.facebook.com/",
-        "twitter": "https://twitter.com/",
-        "instagram": "https://www.instagram.com/",
-        "youtube": "https://www.youtube.com/"
+      "vk": "https://vk.com/tarosvet", 
+      "ok": "https://ok.ru/group/tarosvet",
+      "telegram": "https://t.me/tarosvet",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
     },
-    "domain": "https://www.codestitch.app"
-}
+    "domain": "https://www.tarosvet.com"
+  }
+  
