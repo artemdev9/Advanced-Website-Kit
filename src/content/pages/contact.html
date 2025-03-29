@@ -1,0 +1,110 @@
+---
+title: "Контакты"
+description: "Свяжитесь с Анной — тарологом с 9-летним опытом. Ответы на вопросы, запись на расклад, поддержка и сотрудничество."
+permalink: "contact/"
+---
+
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/contact.css">
+
+    <script defer>
+        document.addEventListener('DOMContentLoaded', () => {
+            const faqItems = Array.from(document.querySelectorAll('.cs-faq-item'));
+                for (const item of faqItems) {
+                    const onClick = () => {
+                    item.classList.toggle('active')
+                }
+                item.addEventListener('click', onClick)
+                }
+            });     
+            
+            const toggle = document.querySelector("#pricing-603 .cs-toggle");
+            const cardGroup = Array.from(document.querySelectorAll('.cs-card-group'));
+
+            if (toggle && cardGroup.length) {
+                toggle.addEventListener('click', (e) => { 
+                    for (const item of cardGroup) {
+                        item.classList.toggle("active");
+                    }
+                    toggle.classList.toggle("active");
+                });
+            }
+    </script>
+
+{% endblock %}
+
+{% block body %}
+    <!-- ============================================ -->
+    <!--                   Banner                     -->
+    <!-- ============================================ -->
+
+    <div id="banner-1402">
+        <div class="cs-container">
+            <span class="cs-int-title">Написать</span>
+            <div class="cs-breadcrumbs">
+                <a href="" class="cs-link">Главная</a>
+                <a href="" class="cs-link cs-active">Написать</a>
+            </div>
+        </div>
+        <!--Background Image-->
+        <picture class="cs-background">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people-laughing.jpg">
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people-laughing.jpg">
+            <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people-laughing.jpg" alt="people laughing" width="1280" height="568" aria-hidden="true">
+        </picture>
+    </div>  
+
+
+
+    <!-- ============================================ -->
+    <!--             Taplink Profile Section          -->
+    <!-- ============================================ -->
+
+    <section id="taplink-section" style="min-height: 70svh;">
+        <div class="taplink-container">
+            <div class="taplink-profile">
+                <img src="/assets/images/favicon.svg" alt="Profile Image" />
+                <h1>Анна</h1>
+                <p>Таролог</p>
+            </div>
+            <ul class="taplink-links">
+                <li>
+                    <a href="http://wa.me/79856441316" target="_blank"
+                        onclick="ym(100035785, 'reachGoal', 'whatsapp_click');"
+                        style="display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; text-decoration: none; color: #333; transition: background 0.3s;">
+                        <span style="display: flex; align-items: center;">
+                            <img src="/assets/images/whatsapp.svg" alt="Вотсап Icon"
+                                style="width:20px; vertical-align:middle; margin-right:8px;">
+                            Написать в Вотсапп
+                        </span>
+                        <span style="font-size: 24px;">&#8594;</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://t.me/tarosvetanna" target="_blank"
+                        onclick="ym(100035785, 'reachGoal', 'telegram_click');"
+                        style="display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; text-decoration: none; color: #333; transition: background 0.3s;">
+                        <span style="display: flex; align-items: center;">
+                            <img src="/assets/images/telegram.svg" alt="Телеграм Icon"
+                                style="width:20px; vertical-align:middle; margin-right:8px;">
+                            Написать в Телеграм
+                        </span>
+                        <span style="font-size: 24px;">&#8594;</span>
+
+
+
+                        
+                    </a>
+                </li>
+        
+            </ul>
+        </div>
+    </section>
+
+                                                                
+{% endblock %}
